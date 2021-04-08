@@ -9,9 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(JWTHelper.shared.accessToken)
+        loader.startAnimating()
+        JWTHelper.shared.refreshBearer {
+            self.loadHealtData()
+        }
+    }
+    
+    func loadHealtData(){
+        
     }
 
 

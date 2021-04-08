@@ -55,19 +55,28 @@ class JWTHelper {
 
         let token = [headerBase64String, payloadBase64String, signatureBase64String].joined(separator: ".")
         self.accessToken = token
-        self.refreshBearer()
     }
     
     static let shared = JWTHelper()
-    
-    func refreshBearer(){
+
+    func refreshBearer(completionHandler: @escaping () -> Void){
         let url: String = "https://security.alivesci.com/iam/sessions/ebc38746-4bbe-4fd9-b695-3bd44ecb3afc"
         let parameters: [String: Any] = ["access_token": self.accessToken]
         AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.httpBody, headers: ["Content-Type":"application/x-www-form-urlencoded"])
-            .response { (responseObject) -> Void in
-                print(responseObject)
-            }
+            .response { (response) -> Void in
+                switch response.result {
+                case .success:
+                    let responseObj = try? JSONSerialization.jsonObject(with: response.data!, options: [])
+                    if let response = responseObj as? [String: Any] {
+                        self.bearer = response["access_token"] as! JWTHelper.JWT
+                        print(response)
+                    }
 
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+                completionHandler()
+            }
     }
     
 }
