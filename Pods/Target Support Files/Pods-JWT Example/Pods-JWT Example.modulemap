@@ -1,0 +1,6 @@
+framework module Pods_JWT_Example {
+  umbrella header "Pods-JWT Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
