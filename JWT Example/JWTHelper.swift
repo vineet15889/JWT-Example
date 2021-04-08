@@ -69,7 +69,6 @@ class JWTHelper {
                     let responseObj = try? JSONSerialization.jsonObject(with: response.data!, options: [])
                     if let response = responseObj as? [String: Any] {
                         self.bearer = response["access_token"] as! JWTHelper.JWT
-                        print(response)
                     }
 
                 case .failure(let error):
@@ -77,6 +76,30 @@ class JWTHelper {
                 }
                 completionHandler()
             }
+    }
+    
+    func getHealthData(completionHandler: @escaping() -> Void){
+        let url: String = "https://healthscore.alivesci.com/analyzer/trends/individual/591cbcdf-4fec-4206-b651-2b7bf645979e"
+        var request = URLRequest(url:  NSURL(string: url)! as URL)
+        request.httpMethod = "GET"
+        request.setValue("Bearer \(self.bearer)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        AF.request(request).responseJSON { (response) -> Void in
+            switch response.result {
+            case .success:
+                let responseObj = try? JSONSerialization.jsonObject(with: response.data!, options: [])
+                if let response = responseObj as? [String: Any] {
+                    let weightedScores = response["WeightedScores"]
+                    print(weightedScores)
+                }
+
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+
+        }
+        
+       
     }
     
 }

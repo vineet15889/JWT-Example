@@ -19,7 +19,9 @@ class ViewController: UIViewController {
     }
     
     func loadHealtData(){
-        
+        JWTHelper.shared.getHealthData {
+            self.loader.stopAnimating()
+        }
     }
 
 
