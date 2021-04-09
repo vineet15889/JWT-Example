@@ -78,7 +78,7 @@ class JWTHelper {
             }
     }
     
-    func getHealthData(completionHandler: @escaping() -> Void){
+    func getHealthData(completionHandler: @escaping(_ weightedScores:Array<Any>) -> Void){
         let url: String = "https://healthscore.alivesci.com/analyzer/trends/individual/591cbcdf-4fec-4206-b651-2b7bf645979e"
         var request = URLRequest(url:  NSURL(string: url)! as URL)
         request.httpMethod = "GET"
@@ -89,8 +89,8 @@ class JWTHelper {
             case .success:
                 let responseObj = try? JSONSerialization.jsonObject(with: response.data!, options: [])
                 if let response = responseObj as? [String: Any] {
-                    let weightedScores = response["WeightedScores"]
-                    print(weightedScores)
+                    let weightedScores = response["WeightedScores"] as! Array<Any>
+                    completionHandler(weightedScores)
                 }
 
             case .failure(let error):

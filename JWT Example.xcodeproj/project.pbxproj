@@ -18,6 +18,9 @@
 		08EAE1D9261F3E270028090C /* JWTHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EAE1D8261F3E270028090C /* JWTHelper.swift */; };
 		08EAE1DA261F3E270028090C /* JWTHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EAE1D8261F3E270028090C /* JWTHelper.swift */; };
 		08EAE1DB261F3E270028090C /* JWTHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EAE1D8261F3E270028090C /* JWTHelper.swift */; };
+		08EAE1FE262053DA0028090C /* ChartXAxisFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EAE1FD262053DA0028090C /* ChartXAxisFormatter.swift */; };
+		08EAE1FF262053DA0028090C /* ChartXAxisFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EAE1FD262053DA0028090C /* ChartXAxisFormatter.swift */; };
+		08EAE200262053DA0028090C /* ChartXAxisFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EAE1FD262053DA0028090C /* ChartXAxisFormatter.swift */; };
 		280819B8ED951DBEE2C2F6AB /* Pods_JWT_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BE0B7A5327E7FFB2A8DFEA0 /* Pods_JWT_ExampleTests.framework */; };
 		36B59E6D7C25D92C098B0BD6 /* Pods_JWT_Example_JWT_ExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE6874372CFDF009A892F83 /* Pods_JWT_Example_JWT_ExampleUITests.framework */; };
 		486DEC31BCD4B83492F95A79 /* Pods_JWT_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8C9C02821CC96523B938B /* Pods_JWT_Example.framework */; };
@@ -56,6 +59,7 @@
 		08EAE1AB261F3C1B0028090C /* JWT_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWT_ExampleUITests.swift; sourceTree = "<group>"; };
 		08EAE1AD261F3C1B0028090C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08EAE1D8261F3E270028090C /* JWTHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTHelper.swift; sourceTree = "<group>"; };
+		08EAE1FD262053DA0028090C /* ChartXAxisFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartXAxisFormatter.swift; sourceTree = "<group>"; };
 		6BE0B7A5327E7FFB2A8DFEA0 /* Pods_JWT_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JWT_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77AB00B2B6C25B04F7841A8E /* Pods-JWT Example-JWT ExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWT Example-JWT ExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-JWT Example-JWT ExampleUITests/Pods-JWT Example-JWT ExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8082D558543120990F04E280 /* Pods-JWT Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWT Example.release.xcconfig"; path = "Target Support Files/Pods-JWT Example/Pods-JWT Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 				08EAE18B261F3C170028090C /* SceneDelegate.swift */,
 				08EAE18D261F3C170028090C /* ViewController.swift */,
 				08EAE1D8261F3E270028090C /* JWTHelper.swift */,
+				08EAE1FD262053DA0028090C /* ChartXAxisFormatter.swift */,
 				08EAE18F261F3C170028090C /* Main.storyboard */,
 				08EAE192261F3C1B0028090C /* Assets.xcassets */,
 				08EAE194261F3C1B0028090C /* LaunchScreen.storyboard */,
@@ -415,6 +420,7 @@
 				08EAE18A261F3C170028090C /* AppDelegate.swift in Sources */,
 				08EAE18C261F3C170028090C /* SceneDelegate.swift in Sources */,
 				08EAE1D9261F3E270028090C /* JWTHelper.swift in Sources */,
+				08EAE1FE262053DA0028090C /* ChartXAxisFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08EAE1A1261F3C1B0028090C /* JWT_ExampleTests.swift in Sources */,
+				08EAE1FF262053DA0028090C /* ChartXAxisFormatter.swift in Sources */,
 				08EAE1DA261F3E270028090C /* JWTHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08EAE1AC261F3C1B0028090C /* JWT_ExampleUITests.swift in Sources */,
+				08EAE200262053DA0028090C /* ChartXAxisFormatter.swift in Sources */,
 				08EAE1DB261F3E270028090C /* JWTHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
